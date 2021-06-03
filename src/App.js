@@ -10,19 +10,8 @@ const App = () => {
     <div style={{display: "flex", flexDirection: "column"}}>
       <h1 style={{alignSelf: "center"}}>Payment Calculator</h1>
       <FlexContainer>
-        <PaymentForm setPaymentValue={setPaymentValue}>
-      {/* <form>
-        <label htmlFor="income">Income:</label>
-        <input type="number" id="income"/>
-        <label htmlFor="payment">Payment:</label>
-        <input type="number" id="payment"/>
-        <button type="submit">Calculate</button>
-      </form> */}
-        </PaymentForm>
+        <PaymentForm setPaymentValue={setPaymentValue} />
         <PaymentDisplay payment={payment} />
-      {/* <div>
-        <h3>Your payment is:</h3>
-      </div> */}
       </FlexContainer>
     </div>
   )

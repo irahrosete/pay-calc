@@ -16,6 +16,7 @@ const useForm = (defaultValues, onSubmit, validate) => {
     // event?.preventDefault()
     event && event.preventDefault()
     let formErrors = validate(values)
+    setIsSubmitting(true)
     setErrors(formErrors)
     // onSubmit()
   }
@@ -23,8 +24,8 @@ const useForm = (defaultValues, onSubmit, validate) => {
     if (Object.keys(errors).length === 0 && isSubmitting) {
       onSubmit()
     }
-  }, [errors])
-  return {values, handleChange, handleSubmit}
+  }, [errors, isSubmitting])
+  return {values, handleChange, handleSubmit, errors}
 }
 
 export default useForm
