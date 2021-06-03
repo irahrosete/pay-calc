@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import FlexContainer from './components/styled-components/FlexContainer'
-import PaymentForm from './components/PaymentForm'
+import PaymentForm from './components/payment-form/PaymentForm'
 import PaymentDisplay from './components/PaymentDisplay'
 
 const App = () => {
