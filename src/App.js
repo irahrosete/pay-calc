@@ -1,9 +1,26 @@
 import React from 'react'
+import FlexContainer from './components/styled-components/FlexContainer'
+import PaymentForm from './components/PaymentForm'
 
 const App = () => {
   return (
-    <div >
-          The basic empty template
+    <div style={{display: "flex", flexDirection: "column"}}>
+      <h1 style={{alignSelf: "center"}}>Payment Calculator</h1>
+      <FlexContainer>
+        <PaymentForm>
+      {/* <form>
+        <label htmlFor="income">Income:</label>
+        <input type="number" id="income"/>
+        <label htmlFor="payment">Payment:</label>
+        <input type="number" id="payment"/>
+        <button type="submit">Calculate</button>
+      </form> */}
+        </PaymentForm>
+
+      <div>
+        <h3>Your payment is:</h3>
+      </div>
+      </FlexContainer>
     </div>
   )
 }
